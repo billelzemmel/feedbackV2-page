@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Import FontAwesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css');
+
+/* General Styles */
+
+
+/* Login Container */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+/* Form Container */
+.form-container {
+  width: 400px;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #ccc;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Form Title */
+.form-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 32px;
+  color: #6c63ff;
+}
+
+/* Input Container */
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* Input Field */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+.animationRightLeft {
+	animation: animationRightLeft 2s ease-in-out infinite;
+  }
+  .animationLeftRight {
+	animation: animationLeftRight 2s ease-in-out infinite;
+  }
+  .tans3s {
+	animation: animationLeftRight 3s ease-in-out infinite;
+  }
+  .tans4s {
+	animation: animationLeftRight 4s ease-in-out infinite;
+  }
+  
+  @keyframes animationLeftRight {
+	0% {
+	  transform: translateX(0px);
+	}
+	50% {
+	  transform: translateX(1000px);
+	}
+	100% {
+	  transform: translateX(0px);
+	}
+  } 
+  
+  @keyframes animationRightLeft {
+	0% {
+	  transform: translateX(0px);
+	}
+	50% {
+	  transform: translateX(-1000px);
+	}
+	100% {
+	  transform: translateX(0px);
+	}
+  } 
+  
+/* Input Icon */
+.input-container i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -20px;
+  color: #6c63ff;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+/* Input Focus */
+.input-field:focus {
+  border: 2px solid #6c63ff;
+  padding: 8px;
+  animation: inputFocus 0.3s ease-in-out;
+}
+
+.input-field:focus + i {
+  color: #6c63ff;
+  animation: iconFocus 0.3s ease-in-out;
+}
+/* Login Button */
+.login-button {
+	width: 100%;
+	padding: 10px;
+	background-color: #6c63ff;
+	color: white;
+	font-size: 18px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s;
+	animation: buttonAnim 0.3s ease-in-out;
+  }
+  
+  .login-button:hover {
+	background-color: #006699;
+  }
+  
+  /* Animations */
+  @keyframes slideIn {
+	from {
+	  transform: translateX(-400px);
+	}
+	to {
+	  transform: translateX(0);
+	}
+  }
+  
+  @keyframes inputFocus {
+	from {
+	  transform: scale(1);
+	}
+	to {
+	  transform: scale(1.05);
+	}
+  }
+  
+  @keyframes iconFocus {
+	from {
+	  transform: translateY(-50%) scale(1);
+	}
+	to {
+	  transform: translateY(-50%) scale(1.2);
+	}
+  }
+  
+  @keyframes buttonAnim {
+	from {
+	  transform: translateY(20px);
+	}
+	to {
+	  transform: translateY(0);
+	}
+  }
+  
+  .signup-link {
+	display: block; /* display the link as a block-level element */
+	text-align: center; /* center the link */
+	margin-top: 20px; /* add some margin between the link and the login button */
+	font-size: 18px; /* increase the font size for better visibility */
+	color: #6c63ff; /* change the link color */
+	text-decoration: none; /* remove the underline from the link */
+  }
+  
+  .signup-link:hover {
+	color: #006699; /* change the link color when hovered */
+  }
+  
